@@ -73,7 +73,7 @@ async def register_usb_hid_device(config):
 
 
 async def to_code(config):
-    add_idf_component(name="espressif/usb_host_hid", ref="1.0.1")
+    add_idf_component(name="espressif/usb_host_hid", ref="1.0.3")
     add_idf_sdkconfig_option("CONFIG_USB_HOST_CONTROL_TRANSFER_MAX_SIZE", 1024)
     if config.get(CONF_ENABLE_HUBS):
         add_idf_sdkconfig_option("CONFIG_USB_HOST_HUBS_SUPPORTED", True)
